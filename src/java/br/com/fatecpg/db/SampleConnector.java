@@ -17,8 +17,9 @@ import java.sql.SQLException;
             Connection con = DriverManager.getConnection(url, user, pass);// passou desta linha, é pq esta conectado, caso contrario algo deu errado.
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM CUSTOMER");
-            while(rs.next()){
-            
+            while(rs.next())/*serve para percorrer a tabela e me apontar (ponteiro) as linhas*/{
+                Customer c = new Customer (rs.getString("CUSTOMER_ID"), rs.getString("NAME"), rs.getDouble("CREDIT_LIMIT"));
+                list.add(c);
             }
             return list;
        }
