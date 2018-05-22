@@ -6,7 +6,7 @@
         <title>JavaDB WebApp</title>
     </head>
     <body>
-        <%@include file="WEB-INF/jspf/header.hspf"%>
+        <%@include file="WEB-INF/jspf/header.jspf"%>
         <div>
             Site de consultas do banco de dados
             "sample" do JavaDB
